@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import { userService } from "../../_services/user.services";
 import DataTable from "../../components/admin/DataTable";
 import FormDialog from "../../components/admin/Dialog";
+import { PatientService } from "../../_services/patient.services";
 
 import "../../styles/patients.css";
 
@@ -15,17 +16,16 @@ const Patients = () => {
   const [patients, setPatients] = useState([]);
   const navigate = useNavigate();
 
-  const getPatients = async () => {
-    userService.getAllUsers().then((res) => {
-      console.log(res.data.data);
-      setPatients(res.data.data);
-    });
 
-    // axios.get("http://localhost:5000/api/users/").then((res) => {
-    //   console.log(res.data);
-    //   setPatients(res.data);
-    // });
-  };
+   const getPatients =()=>{
+
+     PatientService.getAllPatients().then((res) => {
+       console.log(res.data.data);
+       setPatients(res.data.data);
+      })
+    }
+  
+  
   const onSavePatient = async (patient) => {
     // axios
     // .post("http://localhost:5000/api/v1/patients/create", patient)

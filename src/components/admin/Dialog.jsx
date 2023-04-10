@@ -18,6 +18,7 @@ export default function FormDialog({
   const [patient, setPatient] = useState({ ...initializePatient });
 
   function handleSent() {
+    console.log(patient , "patient");
     onSave(patient);
     onClose();
   }
@@ -32,29 +33,29 @@ export default function FormDialog({
         <DialogTitle>{title} </DialogTitle>
         <DialogContent>
           <TextField
-            value={patient.firstName}
+            value={patient.nom}
             autoFocus
             margin="dense"
             id="firstName"
-            label="First Name"
+            label="nom"
             type="text"
             fullWidth
             variant="outlined"
             onChange={(e) =>
-              setPatient({ ...patient, firstName: e.target.value })
+              setPatient({ ...patient, nom: e.target.value })
             }
           />
           <TextField
-            value={patient.lastName}
+            value={patient.prenom}
             autoFocus
             margin="dense"
             id="lastName"
-            label="Last Name"
+            label="prenom"
             type="text"
             fullWidth
             variant="outlined"
             onChange={(e) => {
-              setPatient({ ...patient, lastName: e.target.value });
+              setPatient({ ...patient, prenom: e.target.value });
             }}
           />
           {/* <TextField
@@ -69,16 +70,60 @@ export default function FormDialog({
             onChange={(e) => setPatient({ ...patient, email: e.target.value })}
           /> */}
           <TextField
-            value={patient.age}
+            value={patient.pays}
             autoFocus
             margin="dense"
             id="age"
-            label="Age"
-            type="number"
+            label="pays"
+            type="text"
             fullWidth
             variant="outlined"
-            onChange={(e) => setPatient({ ...patient, age: e.target.value })}
+            onChange={(e) => setPatient({ ...patient, pays: e.target.value })}
           />
+          <TextField
+            value={patient.email}
+            autoFocus
+            margin="dense"
+            id="age"
+            label="pays"
+            type="text"
+            fullWidth
+            variant="outlined"
+            onChange={(e) => setPatient({ ...patient, email: e.target.value })}
+          />
+          <TextField
+            value={patient.sexe}
+            autoFocus
+            margin="dense"
+            id="age"
+            label="pays"
+            type="text"
+            fullWidth
+            variant="outlined"
+            onChange={(e) => setPatient({ ...patient, sexe: e.target.value })}
+          />
+          <TextField
+            value={patient.telephone}
+            autoFocus
+            margin="dense"
+            id="age"
+            label="pays"
+            type="text"
+            fullWidth
+            variant="outlined"
+            onChange={(e) => setPatient({ ...patient, telephone: e.target.value })}
+          />
+          {/* <TextField
+            value={patient.dataNaissance && patient.dataNaissance.split("T")[0]}
+            autoFocus
+            margin="dense"
+            id="age"
+            label="data naissance"
+            type="date"
+            fullWidth
+            variant="outlined"
+            onChange={(e) => setPatient({ ...patient, dataNaissance: e.target.value })}
+          /> */}
         </DialogContent>
         <DialogActions>
           <Button color="error" variant="outlined" onClick={onClose}>
