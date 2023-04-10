@@ -1,0 +1,32 @@
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.__container {
+  height: 700px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.__colleft {
+  background-color: rgba(128, 128, 128, 0.11);
+}
+
+input {
+  border: 2px solid rgba(128, 128, 128, 0.582);
+  border-radius: 5px;
+  height: 50px;
+  background-color: whitesmoke;
+}

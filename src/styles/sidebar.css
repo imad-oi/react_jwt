@@ -1,0 +1,40 @@
+.sidebar_container {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 100vh;
+  padding: 0 10px;
+}
+
+.item {
+  background-color: whitesmoke;
+  margin: 1px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item:hover {
+  color: rgba(0, 0, 255, 0.679);
+  background-color: rgb(228, 224, 224);
+}
+.link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.item:hover .link {
+  color: rgba(0, 0, 255, 0.679);
+  text-decoration: none;
+}
+
+.logo {
+  color: rgba(64, 0, 255, 0.679);
+}
+
+.admin_profile {
+  position: absolute;
+  bottom: 20px;
+}

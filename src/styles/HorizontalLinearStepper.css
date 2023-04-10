@@ -1,0 +1,5 @@
+.__container{
+    width: calc(100% - 240px);
+    /* background-color: rgba(255, 0, 0, 0.096); */
+    height: 100vh;
+}

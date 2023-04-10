@@ -1,0 +1,16 @@
+input {
+    width: 370px;
+    /* height: 25px; */
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: #333; */
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid #0d56dd;
+    outline: none;
+}
